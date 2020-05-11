@@ -44,6 +44,7 @@
             this.TbTotalRecaudo = new System.Windows.Forms.TextBox();
             this.TbCantidadRecibo = new System.Windows.Forms.TextBox();
             this.LbCantidadRecibo = new System.Windows.Forms.Label();
+            this.BtnExportar = new System.Windows.Forms.Button();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbPuntos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -181,7 +182,7 @@
             this.LbTotaRecaudo.AutoSize = true;
             this.LbTotaRecaudo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTotaRecaudo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbTotaRecaudo.Location = new System.Drawing.Point(372, 155);
+            this.LbTotaRecaudo.Location = new System.Drawing.Point(369, 109);
             this.LbTotaRecaudo.Name = "LbTotaRecaudo";
             this.LbTotaRecaudo.Size = new System.Drawing.Size(201, 30);
             this.LbTotaRecaudo.TabIndex = 59;
@@ -190,7 +191,7 @@
             // TbTotalRecaudo
             // 
             this.TbTotalRecaudo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbTotalRecaudo.Location = new System.Drawing.Point(662, 152);
+            this.TbTotalRecaudo.Location = new System.Drawing.Point(645, 109);
             this.TbTotalRecaudo.Name = "TbTotalRecaudo";
             this.TbTotalRecaudo.Size = new System.Drawing.Size(153, 37);
             this.TbTotalRecaudo.TabIndex = 60;
@@ -198,7 +199,7 @@
             // TbCantidadRecibo
             // 
             this.TbCantidadRecibo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbCantidadRecibo.Location = new System.Drawing.Point(662, 228);
+            this.TbCantidadRecibo.Location = new System.Drawing.Point(645, 185);
             this.TbCantidadRecibo.Name = "TbCantidadRecibo";
             this.TbCantidadRecibo.Size = new System.Drawing.Size(153, 37);
             this.TbCantidadRecibo.TabIndex = 62;
@@ -208,17 +209,35 @@
             this.LbCantidadRecibo.AutoSize = true;
             this.LbCantidadRecibo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbCantidadRecibo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbCantidadRecibo.Location = new System.Drawing.Point(372, 235);
+            this.LbCantidadRecibo.Location = new System.Drawing.Point(369, 189);
             this.LbCantidadRecibo.Name = "LbCantidadRecibo";
             this.LbCantidadRecibo.Size = new System.Drawing.Size(281, 30);
             this.LbCantidadRecibo.TabIndex = 61;
             this.LbCantidadRecibo.Text = "Cantidad de Recibos :";
+            // 
+            // BtnExportar
+            // 
+            this.BtnExportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(94)))), ((int)(((byte)(142)))));
+            this.BtnExportar.FlatAppearance.BorderSize = 0;
+            this.BtnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExportar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExportar.ForeColor = System.Drawing.Color.White;
+            this.BtnExportar.Image = ((System.Drawing.Image)(resources.GetObject("BtnExportar.Image")));
+            this.BtnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExportar.Location = new System.Drawing.Point(374, 255);
+            this.BtnExportar.Name = "BtnExportar";
+            this.BtnExportar.Size = new System.Drawing.Size(183, 44);
+            this.BtnExportar.TabIndex = 63;
+            this.BtnExportar.Text = "Exportar";
+            this.BtnExportar.UseVisualStyleBackColor = false;
+            this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
             // 
             // ConsultaGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 619);
+            this.Controls.Add(this.BtnExportar);
             this.Controls.Add(this.TbCantidadRecibo);
             this.Controls.Add(this.LbCantidadRecibo);
             this.Controls.Add(this.TbTotalRecaudo);
@@ -258,5 +277,6 @@
         private System.Windows.Forms.TextBox TbTotalRecaudo;
         private System.Windows.Forms.TextBox TbCantidadRecibo;
         private System.Windows.Forms.Label LbCantidadRecibo;
+        private System.Windows.Forms.Button BtnExportar;
     }
 }

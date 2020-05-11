@@ -4,18 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Entity;
+
 namespace Dal
 {
     public class RepositorioExportacion
     {
-        public void Exportar(string datosReciboDePago,string nombre)
+        public void ExportarContenido(IList<ReciboDePago> datosReciboDePago,string nombre)
         {
             Almacenar almacenar = new Almacenar();
             string ruta = ObtenerNombreArchivoExportado(nombre);
-            FileStream fileStream = new FileStream(ruta, FileMode.Create);
-            fileStream.Close();
-            almacenar.Guardar(datosReciboDePago,ruta);
+            foreach (var item in datosReciboDePago)
+            {
+                almacenar.Guardar(item.DatosExportacion(), ruta);
+            }
+            
         }
+        public void ExportarEncabezado(string datosReciboDePago, string nombre)
+        {
+            Almacenar almacenar = new Almacenar();
+            string ruta = ObtenerNombreArchivoExportado(nombre);
+            almacenar.Guardar(datosReciboDePago, ruta);
+        }
+
         public string ObtenerNombreArchivoExportado(string nombre)
         {
               return $"{nombre}.Txt";

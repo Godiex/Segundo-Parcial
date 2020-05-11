@@ -49,5 +49,19 @@ namespace SegundoParcial
             TbCantidadRecibo.Text = servicioReciboDePago.CantidadPorFechaYEntidad(entidadServicio, fecha).ToString();
             TbTotalRecaudo.Text = servicioReciboDePago.ObtenerRecaudoPorFechaYEntidad(entidadServicio, fecha).ToString();
         }
+
+        private void BtnExportar_Click(object sender, EventArgs e)
+        {
+            RespuestaConsulta respuestaConsulta = servicioReciboDePago.Consultar();
+            DateTime fecha = DtpMesAñoDia.Value;
+            string entidadServicio = CbTipoConsulta.Text;
+            IList<ReciboDePago> recibosDePago = servicioReciboDePago.ConsultarPorFechaYEntidad(entidadServicio, fecha);
+            string catidadRecibo= servicioReciboDePago.CantidadPorFechaYEntidad(entidadServicio, fecha).ToString();
+            string TotalRecaudo = servicioReciboDePago.ObtenerRecaudoPorFechaYEntidad(entidadServicio, fecha).ToString();
+            ServicioExportar servicioExportar = new ServicioExportar();
+            servicioExportar.ExportarEncabezado(entidadServicio+";"+fecha.ToShortDateString(),entidadServicio);
+            servicioExportar.ExportarEncabezado(TotalRecaudo +";"+catidadRecibo ,entidadServicio);
+            servicioExportar.ExportarContenido(recibosDePago,entidadServicio);
+        }
     }
 }
