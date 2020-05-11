@@ -26,7 +26,7 @@ namespace Entity
         }
         public string DatosExportacion()
         {
-            return $"{IdReciboPago};{FechaPago};{ValorPagado}";
+            return $"{IdReciboPago};{FechaPago.ToShortDateString()};{ValorPagado}";
         }
 
     }

@@ -65,5 +65,10 @@ namespace SegundoParcial
         {
             AbrirFormHijoEnPanel(new  ConsultaGui());
         }
+
+        private void BtnGuardarRecibo_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijoEnPanel(new GuardarReciboGui());
+        }
     }
 }

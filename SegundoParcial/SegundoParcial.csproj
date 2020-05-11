@@ -52,6 +52,12 @@
     <Compile Include="ConsultaGui.Designer.cs">
       <DependentUpon>ConsultaGui.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuardarReciboGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuardarReciboGui.Designer.cs">
+      <DependentUpon>GuardarReciboGui.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipalGui.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     <Compile Include="VentanaEmergente.cs" />
     <EmbeddedResource Include="ConsultaGui.resx">
       <DependentUpon>ConsultaGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuardarReciboGui.resx">
+      <DependentUpon>GuardarReciboGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipalGui.resx">
       <DependentUpon>MenuPrincipalGui.cs</DependentUpon>

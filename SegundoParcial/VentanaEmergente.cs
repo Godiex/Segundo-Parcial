@@ -13,6 +13,10 @@ namespace SegundoParcial
         {
             MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+        public void Mensaje(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Imformacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         public void MensajeErrorCampoVacio()
         {
             string mensaje = "Error : Llene todos los campos";

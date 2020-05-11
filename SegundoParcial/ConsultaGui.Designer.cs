@@ -33,9 +33,22 @@
             this.PbPuntos = new System.Windows.Forms.PictureBox();
             this.LbTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DgvRecibo = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.CbTipo = new System.Windows.Forms.CheckBox();
+            this.CbFecha = new System.Windows.Forms.CheckBox();
+            this.DtpMesAñoDia = new System.Windows.Forms.DateTimePicker();
+            this.CbTipoConsulta = new System.Windows.Forms.ComboBox();
+            this.BtnConsultar = new System.Windows.Forms.Button();
+            this.LbTotaRecaudo = new System.Windows.Forms.Label();
+            this.TbTotalRecaudo = new System.Windows.Forms.TextBox();
+            this.TbCantidadRecibo = new System.Windows.Forms.TextBox();
+            this.LbCantidadRecibo = new System.Windows.Forms.Label();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbPuntos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRecibo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelSuperior
@@ -81,11 +94,137 @@
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
             // 
+            // DgvRecibo
+            // 
+            this.DgvRecibo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvRecibo.Location = new System.Drawing.Point(32, 332);
+            this.DgvRecibo.Name = "DgvRecibo";
+            this.DgvRecibo.Size = new System.Drawing.Size(874, 280);
+            this.DgvRecibo.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(68)))), ((int)(((byte)(109)))));
+            this.panel1.Controls.Add(this.CbTipo);
+            this.panel1.Controls.Add(this.CbFecha);
+            this.panel1.Controls.Add(this.DtpMesAñoDia);
+            this.panel1.Controls.Add(this.CbTipoConsulta);
+            this.panel1.Controls.Add(this.BtnConsultar);
+            this.panel1.Location = new System.Drawing.Point(32, 109);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(241, 203);
+            this.panel1.TabIndex = 56;
+            // 
+            // CbTipo
+            // 
+            this.CbTipo.AutoSize = true;
+            this.CbTipo.Location = new System.Drawing.Point(23, 86);
+            this.CbTipo.Name = "CbTipo";
+            this.CbTipo.Size = new System.Drawing.Size(15, 14);
+            this.CbTipo.TabIndex = 62;
+            this.CbTipo.UseVisualStyleBackColor = true;
+            // 
+            // CbFecha
+            // 
+            this.CbFecha.AutoSize = true;
+            this.CbFecha.Location = new System.Drawing.Point(23, 146);
+            this.CbFecha.Name = "CbFecha";
+            this.CbFecha.Size = new System.Drawing.Size(15, 14);
+            this.CbFecha.TabIndex = 60;
+            this.CbFecha.UseVisualStyleBackColor = true;
+            // 
+            // DtpMesAñoDia
+            // 
+            this.DtpMesAñoDia.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpMesAñoDia.CustomFormat = "mm/yyyy";
+            this.DtpMesAñoDia.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpMesAñoDia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpMesAñoDia.Location = new System.Drawing.Point(44, 146);
+            this.DtpMesAñoDia.Name = "DtpMesAñoDia";
+            this.DtpMesAñoDia.Size = new System.Drawing.Size(177, 37);
+            this.DtpMesAñoDia.TabIndex = 56;
+            this.DtpMesAñoDia.Value = new System.DateTime(2020, 5, 2, 0, 0, 0, 0);
+            // 
+            // CbTipoConsulta
+            // 
+            this.CbTipoConsulta.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbTipoConsulta.FormattingEnabled = true;
+            this.CbTipoConsulta.Items.AddRange(new object[] {
+            "Todos",
+            "Electricaribe",
+            "Emdupar",
+            "Gases del Caribe"});
+            this.CbTipoConsulta.Location = new System.Drawing.Point(44, 86);
+            this.CbTipoConsulta.Name = "CbTipoConsulta";
+            this.CbTipoConsulta.Size = new System.Drawing.Size(177, 38);
+            this.CbTipoConsulta.TabIndex = 56;
+            // 
+            // BtnConsultar
+            // 
+            this.BtnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(94)))), ((int)(((byte)(142)))));
+            this.BtnConsultar.FlatAppearance.BorderSize = 0;
+            this.BtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConsultar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConsultar.ForeColor = System.Drawing.Color.White;
+            this.BtnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("BtnConsultar.Image")));
+            this.BtnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnConsultar.Location = new System.Drawing.Point(23, 20);
+            this.BtnConsultar.Name = "BtnConsultar";
+            this.BtnConsultar.Size = new System.Drawing.Size(203, 44);
+            this.BtnConsultar.TabIndex = 54;
+            this.BtnConsultar.Text = "Consultar";
+            this.BtnConsultar.UseVisualStyleBackColor = false;
+            this.BtnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
+            // 
+            // LbTotaRecaudo
+            // 
+            this.LbTotaRecaudo.AutoSize = true;
+            this.LbTotaRecaudo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbTotaRecaudo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbTotaRecaudo.Location = new System.Drawing.Point(372, 155);
+            this.LbTotaRecaudo.Name = "LbTotaRecaudo";
+            this.LbTotaRecaudo.Size = new System.Drawing.Size(201, 30);
+            this.LbTotaRecaudo.TabIndex = 59;
+            this.LbTotaRecaudo.Text = "Total Recaudo :";
+            // 
+            // TbTotalRecaudo
+            // 
+            this.TbTotalRecaudo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbTotalRecaudo.Location = new System.Drawing.Point(662, 152);
+            this.TbTotalRecaudo.Name = "TbTotalRecaudo";
+            this.TbTotalRecaudo.Size = new System.Drawing.Size(153, 37);
+            this.TbTotalRecaudo.TabIndex = 60;
+            // 
+            // TbCantidadRecibo
+            // 
+            this.TbCantidadRecibo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbCantidadRecibo.Location = new System.Drawing.Point(662, 228);
+            this.TbCantidadRecibo.Name = "TbCantidadRecibo";
+            this.TbCantidadRecibo.Size = new System.Drawing.Size(153, 37);
+            this.TbCantidadRecibo.TabIndex = 62;
+            // 
+            // LbCantidadRecibo
+            // 
+            this.LbCantidadRecibo.AutoSize = true;
+            this.LbCantidadRecibo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbCantidadRecibo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbCantidadRecibo.Location = new System.Drawing.Point(372, 235);
+            this.LbCantidadRecibo.Name = "LbCantidadRecibo";
+            this.LbCantidadRecibo.Size = new System.Drawing.Size(281, 30);
+            this.LbCantidadRecibo.TabIndex = 61;
+            this.LbCantidadRecibo.Text = "Cantidad de Recibos :";
+            // 
             // ConsultaGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 619);
+            this.Controls.Add(this.TbCantidadRecibo);
+            this.Controls.Add(this.LbCantidadRecibo);
+            this.Controls.Add(this.TbTotalRecaudo);
+            this.Controls.Add(this.LbTotaRecaudo);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.DgvRecibo);
             this.Controls.Add(this.PanelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultaGui";
@@ -94,7 +233,11 @@
             this.PanelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbPuntos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRecibo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +247,16 @@
         private System.Windows.Forms.PictureBox PbPuntos;
         private System.Windows.Forms.Label LbTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView DgvRecibo;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.CheckBox CbTipo;
+        private System.Windows.Forms.CheckBox CbFecha;
+        private System.Windows.Forms.DateTimePicker DtpMesAñoDia;
+        private System.Windows.Forms.ComboBox CbTipoConsulta;
+        private System.Windows.Forms.Button BtnConsultar;
+        private System.Windows.Forms.Label LbTotaRecaudo;
+        private System.Windows.Forms.TextBox TbTotalRecaudo;
+        private System.Windows.Forms.TextBox TbCantidadRecibo;
+        private System.Windows.Forms.Label LbCantidadRecibo;
     }
 }
