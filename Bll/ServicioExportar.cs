@@ -10,27 +10,16 @@ namespace Bll
 {
     public class ServicioExportar
     {
+        public IList<ReciboDePago> RecibosDePago { get; set; }
         RepositorioExportacion repositorioExportacion = new RepositorioExportacion();
 
-        public string  ExportarEncabezado (string datosReciboDePago ,string nombre)
+        public string Exportar(IList<ReciboDePago> reciboDePago)
         {
             try
             {
-                repositorioExportacion.ExportarEncabezado(datosReciboDePago,nombre);
-                return "exportacion realizada con exito";
-            }
-            catch (Exception e)
-            {
-
-                return $"error : {e.Message}";
-            }
-        }
-        public string ExportarContenido(IList<ReciboDePago> datosReciboDePago, string nombre)
-        {
-            try
-            {
-                repositorioExportacion.ExportarContenido(datosReciboDePago, nombre);
-                return "exportacion realizada con exito";
+                repositorioExportacion.RecibosDePago = reciboDePago;
+                repositorioExportacion.Exportar();
+                return $"datos exportados con exito";
             }
             catch (Exception e)
             {

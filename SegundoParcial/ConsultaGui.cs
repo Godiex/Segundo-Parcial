@@ -15,6 +15,7 @@ namespace SegundoParcial
     public partial class ConsultaGui : Form
     {
         ServicioReciboDePago servicioReciboDePago = new ServicioReciboDePago();
+        VentanaEmergente ventanaEmergente = new VentanaEmergente();
         public ConsultaGui()
         {
             InitializeComponent();
@@ -56,12 +57,9 @@ namespace SegundoParcial
             DateTime fecha = DtpMesAñoDia.Value;
             string entidadServicio = CbTipoConsulta.Text;
             IList<ReciboDePago> recibosDePago = servicioReciboDePago.ConsultarPorFechaYEntidad(entidadServicio, fecha);
-            string catidadRecibo= servicioReciboDePago.CantidadPorFechaYEntidad(entidadServicio, fecha).ToString();
-            string TotalRecaudo = servicioReciboDePago.ObtenerRecaudoPorFechaYEntidad(entidadServicio, fecha).ToString();
             ServicioExportar servicioExportar = new ServicioExportar();
-            servicioExportar.ExportarEncabezado(entidadServicio+";"+fecha.ToShortDateString(),entidadServicio);
-            servicioExportar.ExportarEncabezado(TotalRecaudo +";"+catidadRecibo ,entidadServicio);
-            servicioExportar.ExportarContenido(recibosDePago,entidadServicio);
+            string mensaje = servicioExportar.Exportar(recibosDePago);
+            ventanaEmergente.Mensaje(mensaje);
         }
     }
 }
